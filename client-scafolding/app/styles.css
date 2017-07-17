@@ -1,0 +1,27 @@
+body{
+    background-image:url('https://vignette1.wikia.nocookie.net/muppet/images/9/92/Bigbirdnewversion.png/revision/latest?cb=20120128201030')
+}
+.homeContainer{
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 17%;
+    font-size: 48px;
+    background-color: black;
+    color: yellow;
+    line-height: 200px;
+    text-decoration: none;
+}
+.container{
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 17%;
+    font-size: 48px;
+    background-color: black;
+    color: yellow;
+    line-height: 200px;
+    text-decoration: none;
+}
