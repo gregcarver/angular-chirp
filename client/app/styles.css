@@ -1,0 +1,50 @@
+body{
+    background-image:url('https://vignette1.wikia.nocookie.net/muppet/images/9/92/Bigbirdnewversion.png/revision/latest?cb=20120128201030')
+    
+}
+.homeContainer{
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 17%;
+    font-size: 48px;
+    background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
+    background-size:cover;
+    color: yellow;
+    line-height: 200px;
+    text-decoration: none;
+    border:5px solid red;
+}
+.container{
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 17%;
+    font-size: 48px;
+    background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
+    background-size:cover;
+    color: yellow;
+    line-height: 200px;
+    text-decoration: none;
+    border:5px solid red;
+}
+.inputStyle{
+    color:red;
+    height:15%;
+    width:50%;
+    font-size:16px;
+    border:5px solid red;
+    background-color:black;
+}
+.buttonStyle{
+    float:right;
+    height:50px;
+    width:150px;
+    font-size:12px;
+    line-height:50px;
+    color:red;
+    border:2.5px solid red;
+    background-color:black;
+}
