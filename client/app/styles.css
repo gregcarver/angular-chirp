@@ -48,3 +48,16 @@ body{
     border:2.5px solid red;
     background-color:black;
 }
+.chirps{
+    height: 1000px;
+    width: 70%;
+    margin-top: 17%;
+    margin: auto;
+    font-size: 24px;
+    background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
+    background-size:cover;
+    color: yellow;
+    text-decoration: none;
+    border:5px solid red;
+    overflow:scroll;  
+}

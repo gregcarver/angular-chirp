@@ -28,7 +28,9 @@ app.controller("HttpPostController",function($scope,$http){
     };
 });
 app.controller("HttpGetController",function($scope,$http){
-        $http.get('http://localhost:3000/api/chirps',data)
+    console.log('i have been got')
+        console.log('git clicked')
+        $http.get('http://localhost:3000/api/chirps')
             .then(function(response){
                 console.log(response.data)
                 $scope.chirps=response.data
