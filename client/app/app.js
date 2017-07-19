@@ -10,6 +10,10 @@ app.config(function($routeProvider){
     })
     .when("/add",{
         templateUrl:"../views/add.html"
+    })
+    .when("/single:id",{
+        templateUrl:"../views/single.html",
+      //  controller:"SingleController"
     });
 });
 app.controller("HttpPostController",function($scope,$http){
@@ -27,16 +31,26 @@ app.controller("HttpPostController",function($scope,$http){
             $scope.user="";
     };
 });
-app.controller("HttpGetController",function($scope,$http){
+app.controller("HttpGetController",function($scope,$http,$location){
     console.log('i have been got')
         console.log('git clicked')
         $http.get('http://localhost:3000/api/chirps')
             .then(function(response){
                 console.log(response.data)
                 $scope.chirps=response.data
-            }
-);
+
+    });
+        $scope.getId=function(id){
+            console.log('clicked')
+            $location.path("/single/" + id)
+        }
 });
+app.controller("SingleController",function(){
+    var id=$routeParams.id;
+
+});
+
+
 
 
 

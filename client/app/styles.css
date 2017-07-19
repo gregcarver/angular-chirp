@@ -48,6 +48,16 @@ body{
     border:2.5px solid red;
     background-color:black;
 }
+.buttonStyle2{
+    float:right;
+    height:34px;
+    width:150px;
+    font-size:12px;
+    line-height:31px;
+    color:red;
+    border:2.5px solid red;
+    background-color:black;
+}
 .chirps{
     height: 1000px;
     width: 70%;
