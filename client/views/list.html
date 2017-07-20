@@ -2,12 +2,14 @@
  
 
 <h1 class="headerStyle">LOOK AT ALL THESE CHIRPS!!</h1>
-<div ng-controller="HttpGetController" class="chirps">
-Chirps:
-    <li ng-repeat="post in chirps">
-        {{post.user}} :  {{post.message}}
-        <button ng-click="getId(post.id)" class="buttonStyle2">View Single Chirp</button>
-    </li>
-</ul>
+<div ng-controller="HttpGetController">
+
+    <div ng-repeat="post in chirps" class="chirps">
+             {{post.user}} :  {{post.message}}
+            <button ng-click="getId(post.id)" class="buttonStyle2">View Single Chirp</button>
+        
+
+    </div>
+
 </div>
 <img class="imgStyle" src="http://media.salemwebnetwork.com/cms/BST/37924-youredoinggreat.jpg">

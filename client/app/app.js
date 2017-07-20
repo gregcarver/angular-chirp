@@ -31,7 +31,10 @@ app.controller("HttpPostController",[ "$scope","$http",function($scope,$http){
         .then(function(response){
             $scope.message="";
             $scope.user="";
-        });
+        })
+        .catch(function(response){
+            alert('You have goofed, Please enter user name and message')
+        })
     };
 }]);
 app.controller("HttpGetController",function($scope,$http,$location){
