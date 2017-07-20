@@ -21,7 +21,6 @@ body{
     width: 70%;
     margin: auto;
     text-align: center;
-    margin-top: 17%;
     font-size: 48px;
     background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
     background-size:cover;
@@ -59,9 +58,8 @@ body{
     background-color:black;
 }
 .chirps{
-    height: 1000px;
+    height: 100%;
     width: 70%;
-    margin-top: 17%;
     margin: auto;
     font-size: 24px;
     background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
@@ -74,7 +72,6 @@ body{
 .chirps2{
     height: 100%;
     width: 70%;
-    margin-top: 17%;
     margin: auto;
     font-size: 24px;
     background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
@@ -85,4 +82,14 @@ body{
     overflow:scroll;  
     margin-top:25%;
     margin-bottom:25%;
+}
+.headerStyle{
+    text-align: center;
+    color:yellow;
+    background-color:black;
+    width:80%;
+    margin:auto;
+    margin-bottom:1em;
+    margin-top:1em;
+    border:4px solid red;
 }

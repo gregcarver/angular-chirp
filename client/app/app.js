@@ -15,21 +15,25 @@ app.config(function($routeProvider){
         templateUrl:"../views/single.html"
     })
 });
-app.controller("HttpPostController",function($scope,$http){
+app.controller("HttpPostController",[ "$scope","$http",function($scope,$http){
     console.log('im loaded')
-    $scope.Poster=function(){
+    $scope.Poster = function() {
         console.log('i clicked');
-        var data=({
+        var data= {
             user : $scope.user,
             message : $scope.message,
-        });
-        $http.post('http://localhost:3000/api/chirps',data)
-            .then(function(response){
-            });
+        };
+        $http({ 
+            method: 'POST', 
+            url: 'http://localhost:3000/api/chirps', 
+            data: data 
+        })
+        .then(function(response){
             $scope.message="";
             $scope.user="";
+        });
     };
-});
+}]);
 app.controller("HttpGetController",function($scope,$http,$location){
     console.log('i have been got')
         console.log('git clicked')
@@ -43,6 +47,8 @@ app.controller("HttpGetController",function($scope,$http,$location){
           //  console.log('clicked')
             $location.path("/single/" + id)
         };
+
+
 });
 app.controller("SingleController",['$scope', '$routeParams', '$http', function($scope, $routeParams, $http){
      var id=$routeParams.id;
@@ -51,10 +57,26 @@ app.controller("SingleController",['$scope', '$routeParams', '$http', function($
         console.log(response)
         $scope.single=response.data
     });
+        $scope.removeItem=function(){
+        console.log('delete clicked')
+    var data=({
+        user : $scope.user,
+        message : $scope.message,
+        id: $scope.id
+    })
+        $http.delete('http://localhost:3000/api/chirps/'+id)
+    .then(function(response){
+        console.log(response.data)
+    })
+    }
 }]);
 //]
 
-
+    //    $scope.removeItem=function(item){
+    //         console.log('deleted')
+    //         var index=$scope.chirps.indexOf(item);
+    //         $scope.chirps.splice(index,1)
+    //     }
 
 
 
