@@ -3,7 +3,7 @@
 <div ng-controller="HttpGetController" class="chirps">
  <!-- <button ng-click="Getter()" class="buttonStyle">Show Chirps</button>-->
     <li ng-repeat="post in chirps">
-        {{post.user + ':' + post.message}}
+        {{post.user}} :  {{post.message}}
         <button ng-click="getId(post.id)" class="buttonStyle2">View Single Chirp</button>
     </li>
 </ul>

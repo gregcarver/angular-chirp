@@ -11,10 +11,9 @@ app.config(function($routeProvider){
     .when("/add",{
         templateUrl:"../views/add.html"
     })
-    .when("/single:id",{
-        templateUrl:"../views/single.html",
-      //  controller:"SingleController"
-    });
+    .when("/single/:id",{
+        templateUrl:"../views/single.html"
+    })
 });
 app.controller("HttpPostController",function($scope,$http){
     console.log('im loaded')
@@ -38,17 +37,22 @@ app.controller("HttpGetController",function($scope,$http,$location){
             .then(function(response){
                 console.log(response.data)
                 $scope.chirps=response.data
-
     });
         $scope.getId=function(id){
-            console.log('clicked')
+            console.log(id)
+          //  console.log('clicked')
             $location.path("/single/" + id)
-        }
+        };
 });
-app.controller("SingleController",function(){
-    var id=$routeParams.id;
-
-});
+app.controller("SingleController",['$scope', '$routeParams', '$http', function($scope, $routeParams, $http){
+     var id=$routeParams.id;
+    $http.get('http://localhost:3000/api/chirps/'+id)
+        .then(function(response){
+        console.log(response)
+        $scope.single=response.data
+    });
+}]);
+//]
 
 
 
