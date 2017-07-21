@@ -32,7 +32,7 @@ app.controller("HttpPostController",[ "$scope","$http",function($scope,$http){
             $scope.message="";
             $scope.user="";
         })
-        .catch(function(response){
+        .catch(function(res){
             alert('You have goofed, Please enter user name and message')
         })
     };
@@ -44,6 +44,9 @@ app.controller("HttpGetController",function($scope,$http,$location){
             .then(function(response){
                 console.log(response.data)
                 $scope.chirps=response.data
+           //     console.log(reponse.data.user)
+            //    $scope.Userz=response.data.user
+                
     });
         $scope.getId=function(id){
             console.log(id)
@@ -51,11 +54,10 @@ app.controller("HttpGetController",function($scope,$http,$location){
             $location.path("/single/" + id)
         };
 
-
 });
 app.controller("SingleController",['$scope', '$routeParams', '$http', function($scope, $routeParams, $http){
      var id=$routeParams.id;
-    $http.get('http://localhost:3000/api/chirps/'+id)
+    $http.get('http://localhost:3000/api/chirps/one/'+id)
         .then(function(response){
         console.log(response)
         $scope.single=response.data
@@ -67,7 +69,7 @@ app.controller("SingleController",['$scope', '$routeParams', '$http', function($
         message : $scope.message,
         id: $scope.id
     })
-        $http.delete('http://localhost:3000/api/chirps/'+id)
+        $http.delete('http://localhost:3000/api/chirps/one/'+id)
     .then(function(response){
         console.log(response.data)
     })

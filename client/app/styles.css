@@ -1,76 +1,83 @@
 body{
-    background-image:url('https://vignette1.wikia.nocookie.net/muppet/images/9/92/Bigbirdnewversion.png/revision/latest?cb=20120128201030')
+    background-image:url('http://s1.picswalls.com/wallpapers/2014/07/24/pattern-background_113041807_88.jpg')
     
 }
-.homeContainer{
-    height: 500px;
-    width: 70%;
+
+.addContainer {
+    height: 100%;
+    width:70%;
     margin: auto;
     text-align: center;
-    margin-top: 17%;
     font-size: 48px;
-    background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
-    background-size:cover;
+    background-image: url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
     color: yellow;
     line-height: 150px;
     text-decoration: none;
-    border:5px solid red;
-    padding-top:150px;
-}
-.container{
-    height: 500px;
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    font-size: 48px;
-    background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
-    background-size:cover;
-    color: yellow;
-    line-height: 200px;
-    text-decoration: none;
-    border:5px solid red;
-    margin-bottom:2.5%;
+    border: 5px solid forestgreen;
+    margin-bottom: 2.5%;
+    margin-top: 10%;
+    font-family: 'Indie Flower', cursive;
 }
 .inputStyle{
-    color:red;
+    color:yellow;
     height:15%;
     width:50%;
-    font-size:16px;
-    border:5px solid red;
+    font-size:30px;
+    border:5px solid forestgreen;
     background-color:black;
 }
 .buttonStyle{
     float:right;
     height:50px;
-    width:150px;
-    font-size:12px;
+    width:250px;
+    font-size:20px;
     line-height:50px;
-    color:red;
-    border:2.5px solid red;
+    color:forestgreen;
+    border:2.5px solid forestgreen;
     background-color:black;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    font-family: 'Indie Flower', cursive;
+}
+.buttonStyle3{
+    float:right;
+    height:50px;
+    width:250px;
+    font-size:20px;
+    line-height:50px;
+    color:forestgreen;
+    border:2.5px solid forestgreen;
+    background-color:black;
+    position: absolute;
+    bottom: 0;
+    right:12em;
+    font-family: 'Indie Flower', cursive;
 }
 .buttonStyle2{
     float:right;
     height:34px;
-    width:150px;
-    font-size:12px;
+    width:250px;
+    font-size:20px;
     line-height:31px;
-    color:red;
-    border:2.5px solid red;
+    color:forestgreen;
+    border:2.5px solid forestgreen;
     background-color:black;
+    margin-top:3%;
 }
 .chirps{
     height: 100%;
     width: 70%;
     margin: auto;
     font-size: 24px;
-    background-image:url('https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg');
+    background-image: url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
     background-size:cover;
     color: yellow;
     text-decoration: none;
     overflow:scroll;  
-    margin-bottom:15px;
+    margin-top:2em;
     border:3px solid black;
+    font-family: 'Indie Flower', cursive;
 }
 .chirps2{
     height: 100%;
@@ -89,11 +96,12 @@ body{
     text-align: center;
     color:yellow;
     background-color:black;
-    width:80%;
     margin:auto;
-    margin-bottom:1em;
-    margin-top:1em;
-    border:4px solid red;
+    line-height: 5em;
+    height:5em;
+    font-size: 48px;
+    background-image:url('https://t3.ftcdn.net/jpg/01/43/44/56/240_F_143445697_EOPC3Y2y0WuLQPkPW6uiej8J6iZ0CYBG.jpg');
+    font-family: 'Indie Flower', cursive;
 }
 
 .imgStyle {
@@ -106,24 +114,37 @@ body{
     margin-top:10%;
 }
 .homeButton{
-    height: 225px;
+    height: 200px;
     width: 70%;
     margin: auto;
     text-align: center;
-    margin-top:1%;
+    margin-top:10%;
     margin-bottom:1%;
-    font-size: 48px;
-    background-image: url(https://www.xmple.com/wallpaper/yellow-gradient-red-linear-1920x1080-c2-feeb10-fe4010-a-240-f-14.svg);
+    font-size: 36px;
+   background-image:url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
     background-size: cover;
     color: yellow;
     margin-left:16%;
+    font-family: 'Indie Flower', cursive;
 }
 .homeIMG{
-    width:33%;
+    width:24%;
     height:300px;
     margin:1px;
 }
 .imgContainer{
+    position: absolute;
     margin-left:5%;
     margin-right:5%;
+    bottom:0;
+}
+.circleIMG{
+    border-radius:50%;
+    height:100px;
+    width:100px;
+}
+.trash{
+    height:100px;
+    width:100px;
+    float:right;
 }
