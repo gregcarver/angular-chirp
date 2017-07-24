@@ -1,4 +1,3 @@
-
 var app=angular.module('myApp', ["ngRoute",]);
 app.config(function($routeProvider){
     $routeProvider
@@ -13,6 +12,9 @@ app.config(function($routeProvider){
     })
     .when("/single/:id",{
         templateUrl:"../views/single.html"
+    })
+    .when("/user/:user",{
+        templateUrl:"../views/user.html"
     })
 });
 app.controller("HttpPostController",[ "$scope","$http",function($scope,$http){
@@ -73,8 +75,56 @@ app.controller("SingleController",['$scope', '$routeParams', '$http', function($
     .then(function(response){
         console.log(response.data)
     })
+    window.location.href= "/#/list"
     }
 }]);
+app.controller("UserController",['$scope','$http','$location',function($scope,$http,$location){
+        console.log('git clicked')
+        $http.get('http://localhost:3000/api/users')
+            .then(function(response){
+                console.log(response.data)
+                $scope.pizza=response.data     
+    });
+        $scope.getUser=function(user){
+            
+           console.log('clicked');
+            $location.path("/user/" + user)
+            console.log(user);
+        };
+
+}]);
+
+app.controller("SingleUserController",['$scope', '$routeParams', '$http', function($scope, $routeParams, $http){
+      var user = $routeParams.user;
+     console.log(user)
+    $http.get('http://localhost:3000/api/chirps/user/'+user)
+        .then(function(response){
+            console.log(user)
+        console.log(response)
+        $scope.users=response.data
+    });
+    $scope.removeUser=function(){
+        console.log('delete clicked')
+    $http.delete('http://localhost:3000/api/chirps/'+user)
+    .then(function(response){
+        console.log(response.data)
+    })
+    window.location.href= "/#/list"
+    }
+}]);
+
+// app.controller("SingleUserController",['$location','$scope', '$routeParams', '$http', function($location, $scope, $routeParams, $http){
+//      var user=$routeParams.users;
+//      console.log($routeParams.user)
+//      console.log(user)
+//     $http.get('http://localhost:3000/api/users/' + user)
+//         .then(function(response){
+            
+//         console.log(response)
+//         $scope.user=response.data
+//     });
+// }]);
+
 //]
 
     //    $scope.removeItem=function(item){
@@ -111,3 +161,25 @@ app.controller("SingleController",['$scope', '$routeParams', '$http', function($
 // ,"myPosts","myGets"
 //var post=angular.module('myPosts',[]
 //var getMod=angular.module('myGets',[]);
+// $scope.removeItem=function(id){
+//     var id=$routeParams.id;
+//             console.log('delete')
+//             console.log(id)
+//             $http({
+//                 method: 'DELETE',
+//                 url: 'http://localhost:3000/api/chirps/one/'+id
+//             })
+            
+//             .then(function(response){
+//                 var id=$routeParams.id;
+//                 var chirps = $scope.chirps;
+//                 console.log(chirps);
+//                 chirps = chirps.filter(function(chirp){
+//                     if (chirp.id !== id){
+//                         return chirp;
+//                     }
+//                 });
+//                 $scope.chirps = chirps;
+//             //  window.location.reload();
+//             });
+//         };

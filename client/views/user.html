@@ -1,0 +1,9 @@
+        <div ng-controller="SingleUserController">
+      <div class="chirps" ng-repeat="post in users">        
+          <span>        
+            <img class="circleIMG" src="https://pbs.twimg.com/profile_images/202558378/superchirp_logo_400x400.png">
+             {{post.user}} :  {{post.message}}
+            <button ng-click="removeUser(post)" class="buttonStyle2">Delete this Chirp</button>
+        </span>
+        </div>
+    </div>

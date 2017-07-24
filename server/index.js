@@ -65,9 +65,12 @@ app.route('/api/chirps/user/:user')
                 var chirps = JSON.parse(fileContents);
                 var user = req.params.user;
                 var response = chirps.filter(function(chirp) {
-                    if (chirp.user.toLowerCase().trim() === user.toLowerCase().trim()) {
+                    if(chirp.user){
+                        if (chirp.user.toLowerCase().trim() === user.toLowerCase().trim()) {
                         return chirp;
                     }
+                    }
+
                 });
                 if (response) {
                     res.send(response);

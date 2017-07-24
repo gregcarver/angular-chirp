@@ -1,5 +1,5 @@
 body{
-    background-image:url('http://s1.picswalls.com/wallpapers/2014/07/24/pattern-background_113041807_88.jpg')
+    background-image:url('../Pictures/background.jpg')
     
 }
 
@@ -15,8 +15,9 @@ body{
     text-decoration: none;
     border: 5px solid forestgreen;
     margin-bottom: 2.5%;
-    margin-top: 10%;
     font-family: 'Indie Flower', cursive;
+    margin-top:13%
+    
 }
 .inputStyle{
     color:yellow;
@@ -75,7 +76,7 @@ body{
     color: yellow;
     text-decoration: none;
     overflow:scroll;  
-    margin-top:2em;
+    margin-top:1em;
     border:3px solid black;
     font-family: 'Indie Flower', cursive;
 }
@@ -118,7 +119,6 @@ body{
     width: 70%;
     margin: auto;
     text-align: center;
-    margin-top:10%;
     margin-bottom:1%;
     font-size: 36px;
    background-image:url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
@@ -126,6 +126,8 @@ body{
     color: yellow;
     margin-left:16%;
     font-family: 'Indie Flower', cursive;
+    margin-top:25%;
+    
 }
 .homeIMG{
     width:24%;
@@ -148,3 +150,31 @@ body{
     width:100px;
     float:right;
 }
+.sideBar{
+        background-image: url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
+        width:20em;
+        color:yellow;
+        font-family: 'Indie Flower', cursive;
+        text-align: center;
+        border:1px solid yellow;
+        margin:0.5em;
+        
+}
+.greenBird{
+    height:50px;
+    width:50px;
+    margin-left:6em;
+}
+.profile{
+    text-decoration: underline;
+    margin-left:0.5em;
+    font-family: 'Indie Flower', cursive;
+    color:yellow;
+}
+/*.singleHeader{
+    text-decoration: underline;
+    margin-left:0.5em;
+    font-family: 'Indie Flower', cursive;
+    color:yellow;
+    font-size:36;
+}*/
