@@ -66,6 +66,7 @@ body{
     margin-top:3%;
     bottom:0;
     right:0;
+    border-radius:50%;
 
 }
 .chirps{
@@ -81,6 +82,8 @@ body{
     margin-top:1em;
     border:3px solid black;
     font-family: 'Indie Flower', cursive;
+    border-radius:10%;
+    overflow: scroll;
 
 }
 .chirps2{
@@ -97,9 +100,12 @@ body{
     margin-top:10%;
 }
 .homeButtonContainer{
-    background-image:url('https://t3.ftcdn.net/jpg/01/43/44/56/240_F_143445697_EOPC3Y2y0WuLQPkPW6uiej8J6iZ0CYBG.jpg');
-     height:15em;
-     
+    background-color:lightblue;
+    border-radius:50%;
+    margin-top:10%;
+    width:75%;
+    height:175px;
+    margin-left:16%;
 }
 .headerStyle{
     color:lightblue;
@@ -108,6 +114,7 @@ body{
     line-height: 3.5em;
     font-size: 48px;
     font-family: 'Indie Flower', cursive;
+    background-image:url('../Pictures/header.jpg')
 }
 
 .imgStyle {
@@ -120,7 +127,7 @@ body{
     margin-top:10%;
 }
 .homeButton{
-    height: 200px;
+    height: 175px;
     width: 70%;
     margin: auto;
     text-align: center;
@@ -131,8 +138,8 @@ body{
     color: lightblue;
     margin-left:16%;
     font-family: 'Indie Flower', cursive;
-    margin-top:25%;
-    
+    margin-bottom:12%;
+    border-radius:50%;
 }
 .homeIMG{
     width:24%;
@@ -158,12 +165,16 @@ body{
 .sideBar{
         background-image: url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
         width:14em;
+        height:2em;
+        line-height:2em;
         color:lightblue;
         font-family: 'Indie Flower', cursive;
         text-align: center;
         border:1px solid lightblue;
-        margin:0.5em;
         margin:auto;
+        border-radius:50%;
+        margin-top:2em;
+        font-size:15px;
 }
 .sideBar2{
         background-image: url('http://img04.deviantart.net/3184/i/2013/341/6/a/sea_green_gradient_by_sirmudkipz13-d6x25ap.png');
@@ -176,20 +187,22 @@ body{
         float:left;
         font-size:16px;
         text-decoration: none;
-        margin:auto;
+        margin:0.5em;
+        margin-left:8em;
+        border-radius:50%;
 }
 .greenBird{
     height:50px;
     width:50px;
     margin-left:6em;
     float:right;
-    margin-right:2em;
+    margin-right:3em;
 }
 .profile{
     text-decoration: underline;
     margin-left:0.5em;
     font-family: 'Indie Flower', cursive;
-    color:green;
+    color:lightblue;
     margin:auto;
     text-align:center;
 }
@@ -214,11 +227,17 @@ body{
 .profileTable{
     background-color:lightblue;
     height:100%;
-    
+    background-image:url('../Pictures/header.jpg');
 }
 .profileTable2{
     background-color:lightblue;
     height:50px;
     width:100%;
     border:solid 1px green;
+
+}
+.listContainer{
+    background-color:lightblue;
+    border-radius:20%;
+    margin-top:1em;
 }
