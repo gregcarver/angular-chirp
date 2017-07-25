@@ -46,13 +46,10 @@ app.controller("HttpGetController",function($scope,$http,$location){
             .then(function(response){
                 console.log(response.data)
                 $scope.chirps=response.data
-           //     console.log(reponse.data.user)
-            //    $scope.Userz=response.data.user
                 
     });
         $scope.getId=function(id){
             console.log(id)
-          //  console.log('clicked')
             $location.path("/single/" + id)
         };
 
@@ -86,28 +83,27 @@ app.controller("UserController",['$scope','$http','$location',function($scope,$h
                 $scope.pizza=response.data     
     });
         $scope.getUser=function(user){
-            
            console.log('clicked');
             $location.path("/user/" + user)
-            console.log(user);
         };
 
 }]);
-
 app.controller("SingleUserController",['$scope', '$routeParams', '$http', function($scope, $routeParams, $http){
       var user = $routeParams.user;
-     console.log(user)
     $http.get('http://localhost:3000/api/chirps/user/'+user)
         .then(function(response){
             console.log(user)
         console.log(response)
         $scope.users=response.data
     });
-    $scope.removeUser=function(){
+    $scope.removeUser=function(user){
+        
         console.log('delete clicked')
-    $http.delete('http://localhost:3000/api/chirps/'+user)
+    $http.delete('http://localhost:3000/api/chirps/user/'+user)
     .then(function(response){
-        console.log(response.data)
+        alert('User Chirps deleted! Redirecting to Home')
+        window.location.href = "/#/";
+        console.log(response)
     })
     window.location.href= "/#/list"
     }
